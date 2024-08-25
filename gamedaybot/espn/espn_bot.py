@@ -1,21 +1,21 @@
 import os
-if os.environ.get("AWS_EXECUTION_ENV") is not None:
-    # For use in lambda function
-    import utils.util as util
-    from chat.groupme import GroupMe
-    from chat.slack import Slack
-    from chat.discord import Discord
-else:
+# if os.environ.get("AWS_EXECUTION_ENV") is not None:
+#     # For use in lambda function
+#     import utils.util as util
+#     from chat.groupme import GroupMe
+#     from chat.slack import Slack
+#     from chat.discord import Discord
+# else:
     # For local use
-    import sys
-    sys.path.insert(1, os.path.abspath('.'))
-    import gamedaybot.utils.util as util
-    from gamedaybot.chat.groupme import GroupMe
-    from gamedaybot.chat.slack import Slack
-    from gamedaybot.chat.discord import Discord
-    from gamedaybot.espn.env_vars import get_env_vars
-    import gamedaybot.espn.functionality as espn
-    import gamedaybot.espn.season_recap as recap
+import sys
+sys.path.insert(1, os.path.abspath('.'))
+import gamedaybot.utils.util as util
+from gamedaybot.chat.groupme import GroupMe
+from gamedaybot.chat.slack import Slack
+from gamedaybot.chat.discord import Discord
+from gamedaybot.espn.env_vars import get_env_vars
+import gamedaybot.espn.functionality as espn
+import gamedaybot.espn.season_recap as recap
 
 
 from espn_api.football import League

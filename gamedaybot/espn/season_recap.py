@@ -1,13 +1,13 @@
 import os
 # import pandas as pd
 # import dataframe_image as dfi
-if os.environ.get("AWS_EXECUTION_ENV") is not None:
-    import espn.functionality as espn
-else:
-    # For local use
-    import sys
-    sys.path.insert(1, os.path.abspath('.'))
-    import gamedaybot.espn.functionality as espn
+# if os.environ.get("AWS_EXECUTION_ENV") is not None:
+#     import espn.functionality as espn
+# else:
+#     # For local use
+import sys
+sys.path.insert(1, os.path.abspath('.'))
+import gamedaybot.espn.functionality as espn
 
 
 def trophy_recap(league):
